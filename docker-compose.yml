@@ -3,6 +3,7 @@ version: "3"
 services:
     mysql-db:
         image: mysql
+        container_name: mysql
         environment:
             - MYSQL_DATABASE=datastore
             - MYSQL_USER=user
@@ -17,6 +18,7 @@ services:
 
     postgresql-db:
         image: postgres
+        container_name: postgres
         environment:
             - POSTGRES_PASSWORD=Rca@{123}
             - POSTGRES_USER=anselme
@@ -30,6 +32,7 @@ services:
 
     mongodb:
         image: mongo
+        container_name: mongo
         ports:
             - 27017:27017
         expose:
