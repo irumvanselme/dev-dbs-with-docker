@@ -27,3 +27,15 @@ services:
             - 5432
         volumes:
             - /home/anselme/.temp/data/psql:/var/lib/postgresql/data/
+
+    mongodb:
+        image: mongo
+        ports:
+            - 27017:27017
+        expose:
+            - 27017
+        volumes:
+            - /home/anselme/.temp/data/mongo:/data/db
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=anselme
+            - MONGO_INITDB_ROOT_PASSWORD=Rca@{123}
