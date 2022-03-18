@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+    mysql-db:
+        image: mysql
+        environment:
+            - MYSQL_DATABASE=datastore
+            - MYSQL_USER=user
+            - MYSQL_PASSWORD=password
+            - MYSQL_ROOT_PASSWORD=password
+        ports:
+            - "3306:3306"
+        expose:
+            - 3306
+        volumes:
+            - /home/anselme/.temp/data/mysql:/var/lib/mysql
+
+    postgresql-db:
+        image: postgres
+        environment:
+            - POSTGRES_PASSWORD=Rca@{123}
+            - POSTGRES_USER=anselme
+            - POSTGRES_DB=data-store
+        ports:
+            - "5432:5432"
+        expose:
+            - 5432
+        volumes:
+            - /home/anselme/.temp/data/psql:/var/lib/postgresql/data/
