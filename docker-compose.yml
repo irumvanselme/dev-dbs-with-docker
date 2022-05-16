@@ -5,10 +5,9 @@ services:
         image: mysql
         container_name: mysql
         environment:
-            - MYSQL_DATABASE=datastore
-            - MYSQL_USER=user
-            - MYSQL_PASSWORD=password
-            - MYSQL_ROOT_PASSWORD=password
+            - MYSQL_USER=anselme
+            - MYSQL_PASSWORD=Rca@{123}
+            - MYSQL_ROOT_PASSWORD=Rca@{123}
         ports:
             - "3306:3306"
         expose:
@@ -22,7 +21,6 @@ services:
         environment:
             - POSTGRES_PASSWORD=Rca@{123}
             - POSTGRES_USER=anselme
-            - POSTGRES_DB=data-store
         ports:
             - "5432:5432"
         expose:
